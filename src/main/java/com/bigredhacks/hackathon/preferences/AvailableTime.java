@@ -1,4 +1,4 @@
-package com.bigredhacks.hackathon;
+package com.bigredhacks.hackathon.preferences;
 
 import java.util.Date;
 

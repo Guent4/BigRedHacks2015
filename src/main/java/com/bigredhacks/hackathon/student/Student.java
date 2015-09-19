@@ -1,4 +1,6 @@
-package com.bigredhacks.hackathon;
+package com.bigredhacks.hackathon.student;
+
+import com.bigredhacks.hackathon.AvailableTime;
 
 import java.util.Date;
 import java.util.List;
@@ -14,5 +16,4 @@ public class Student
     public List<String> locations;
     public List<String> languages;
     public List<AvailableTime> availableTimes;
-
 }
