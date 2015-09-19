@@ -1,80 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html class="full" lang="en">
+<!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
+
+<head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
-    <title>Cover Template for Bootstrap</title>
+    <title>Find Your StudyBuddy</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/full.css" rel="stylesheet">
+    <style>
+        .navbar-inverse {
+        background-color: #b31b1b;
+        border-color: #000000;
+        }
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+        .navbar-brand {
+        font-size: 30px;
+        color: #000000;
+        font-family: arial;
+        }
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        body {
+        background-color: transparent;
+        }
+
+        .navbar-inverse .navbar-nav>li>a {
+        color: #000000;
+        }
+
+        .navbar-inverse .navbar-brand {
+        color: #000000;
+        }
+
+        .form-control {
+        height: 30px ;
+        }
+
+        .spacing {
+        height: 85px;
+        }
+
+        .center {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        }
+
+        .fancy {
+        color: #000;
+        font-size: 30px;
+        font-weight: 800;
+        }
+
+        .btn-default {
+        color: #333;
+        font-weight: 800;
+        background-color: #b31b1b;
+        border-color: #000;
+        }
+
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
 
-  <body>
+</head>
 
-    <div class="site-wrapper">
+<body>
 
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">Cover</h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Contact</a></li>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container links">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Study Buddy</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
                 </ul>
-              </nav>
+                <ul class="navbar-form navbar-right" role="search">
+                    <div> Signed in as USERNAME </div>
+                </ul>
             </div>
-          </div>
-
-          <div class="inner cover">
-            <h1 class="cover-heading">Cover your page.</h1>
-            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-            <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">Learn more</a>
-            </p>
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
-          </div>
-
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container -->
+    </nav>
 
-      </div>
-
+    <!-- Put your page content here! -->
+    <div class = "spacing"> </div>
+    <div class = "col-lg-5"> </div>
+    <div class = "center fancy"> Winter is coming, <br><br>
+    Find your Study Buddy now. <br><br>
+    <button type="button" class="btn btn-default btn-lg">
+    Match
+    </button>
     </div>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
 </html>
