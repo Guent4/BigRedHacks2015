@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html class="full" lang="en">
 <!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
+
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+
     <title>Find Your StudyBuddy</title>
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/full.css" rel="stylesheet">
+    <!-- FONTS -->
+    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+
     <style>
         .navbar-inverse {
         background-color: #b31b1b;
         border-color: #000000;
         }
-
-        /*.img {
-            opacity: .4;
-        }*/
 
         .navbar-brand {
         font-size: 30px;
@@ -65,6 +68,28 @@
         border-color: #000;
         }
 
+        h1 {
+            font-family: 'Lobster', Georgia, Times, serif;
+            font-size: 70px;
+            line-height: 100px;
+        }
+
+        body {
+            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+        }
+
+        p {
+            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            line-height: 25px;
+        }
+
+        .navbar-brand > h1 {
+            font-size: 30px;
+            line-height: 0px;
+            margin-top: 10px;
+        }
+
         .navbar-form .form-group {
         display: inline-block;
         margin-bottom: 0px;
@@ -88,7 +113,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Study Buddy</a>
+                <a class="navbar-brand" href="#"><h1>Study Buddy</h1></a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="navbar-form navbar-nav">
@@ -102,12 +127,19 @@
                     </li> -->
                 </ul>
                 <ul class="navbar-form navbar-right" role="search">
-                    <button type="log out" class="btn btn-default">Profile</button>
-                    <button type="log out" class="btn btn-default">Log Out</button>
+                    <button type="log out" class="btn btn-default">
+                        Edit Profile 
+                        <span class="glyphicon glyphicon-user"></span>
+                    </button>
+                    <button type="log out" class="btn btn-default">
+                        Log Out
+                        <span class="glyphicon glyphicon-lock"></span>
+                    </button>
                 </ul>
             </div>
         </div>
     </nav>
+    <div class = 
     <div class = "spacing"> </div>
     <div class = "col-lg-5"> </div>
     <div class = "center fancy"> <br><br>
