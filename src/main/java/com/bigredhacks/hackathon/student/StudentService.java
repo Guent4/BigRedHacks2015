@@ -11,7 +11,7 @@ import java.util.List;
 public class StudentService
 {
     @Autowired
-    private StudentRepository studentRepository;
+    StudentRepository repository;
 
     public String login(Student student)
     {
@@ -24,7 +24,7 @@ public class StudentService
         SecureRandom random = new SecureRandom();
         String session = new BigInteger(130, random).toString(32);
         s.session = session;
-        // studentRepository.save(s);
+        repository.save(s);
         return session;
     }
 }
