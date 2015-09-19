@@ -1,8 +1,9 @@
 'use strict';
 
-angular.module('myApp', [
-  'ngRoute'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/home'});
+var app = angular.module('myApp',[]);
+
+app.controller('LoginController', ['$scope', function($scope) {
+    $scope.buttonClick = function() {
+        console.log("hi");
+    };
 }]);
