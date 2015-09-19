@@ -17,14 +17,14 @@ public class StudentService
     {
         if (student == null)
             throw new IllegalArgumentException("student cannot be null");
-        List<Student> students = null; // studentRepository.findByEmailAndPassword(student.email, student.password);
+        List<Student> students = studentRepository.findByEmailAndPassword(student.email, student.password);
         if (students.size() != 1)
             throw new IllegalArgumentException("student has bad credentials");
         Student s = students.get(0);
         SecureRandom random = new SecureRandom();
         String session = new BigInteger(130, random).toString(32);
         s.session = session;
-        // studentRepository.save(s);
+        studentRepository.save(s);
         return session;
     }
 }
