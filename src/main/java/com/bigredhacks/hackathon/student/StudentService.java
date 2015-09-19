@@ -17,7 +17,7 @@ public class StudentService
     {
         if (student == null)
             throw new IllegalArgumentException("student cannot be null");
-        List<Student> students = null; // studentRepository.findByEmailAndPassword(student.email, student.password);
+        List<Student> students = repository.findByEmailAndPassword(student.email, student.password);
         if (students.size() != 1)
             throw new IllegalArgumentException("student has bad credentials");
         Student s = students.get(0);

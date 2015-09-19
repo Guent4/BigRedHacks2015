@@ -23,10 +23,11 @@ public class StudentController
         try
         {
             session = service.login(student);
+            httpStatus = HttpStatus.OK;
         }
         catch(IllegalArgumentException ex)
         {
-            httpStatus = HttpStatus.BAD_GATEWAY;
+            httpStatus = HttpStatus.BAD_REQUEST;
         }
         return new ResponseEntity<>(session, httpStatus);
     }
