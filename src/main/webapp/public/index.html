@@ -20,8 +20,11 @@
 
     <!-- ICONS -->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-
     <link href="css/carousel.css" rel="stylesheet">
+
+    <!-- JQUERY -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
     <style>
         .navbar-inverse {
@@ -133,6 +136,24 @@
 
     </style>
 
+    <script>
+    // Smooth scroll for in page links
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+    </script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -155,7 +176,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><h1>Study Buddy</h1></a>
+                <a class="navbar-brand" href="#myCarousel"><h1>Study Buddy</h1></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -218,7 +239,7 @@
           <img class="third-slide" src="pics/studybuddy2.jpg" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Find a Study Buddy</h1>
+              <h1>Find Your Study Buddy.</h1>
               <p></p>
               <p><a class="btn btn-lg btn-default" href="#" role="button">Sign up today</a></p>
             </div>
@@ -295,7 +316,7 @@
 
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p class="pull-right"><a href="#myCarousel">Back to top</a></p>
         <p>&copy; 2015 Study Buddy, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
 
@@ -311,9 +332,6 @@
             Register
         </button>
     </div> -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
