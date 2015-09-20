@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html> 
-    <head>
+<html>
+<head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,61 +9,196 @@
     <meta name="author" content="">
 
     <title>Your Profile</title>
+
+    <style>
+        .navbar-inverse {
+            background-color: #b31b1b;
+            border-color: #000000;
+        }
+
+        .navbar-brand {
+            font-size: 30px;
+            color: #fff;
+            font-family: arial;
+        }
+
+        body {
+            background-color: transparent;
+            background-image: url(pics/adwhite.jpg);
+            /*background-size: 100%;*/
+            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            color: #FFF;
+        }
+
+        .navbar-inverse .navbar-nav > li > a {
+            color: #fff;
+        }
+
+        .navbar-inverse .navbar-brand {
+            color: #fff;
+        }
+
+        .form-control {
+            height: 30px;
+        }
+
+        .spacing {
+            height: 60px;
+        }
+
+        .center {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .fancy {
+            color: #000;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        .btn-default {
+            color: #fff;
+            font-weight: 800;
+            background-color: #b31b1b;
+            border-color: #000;
+        }
+
+        h1 {
+            font-family: 'Lobster', Georgia, Times, serif;
+            font-size: 60px;
+            line-height: 100px;
+            text-shadow: 3px 3px #000000
+        }
+
+        h2 {
+            font-family: 'Lobster', Georgia, Times, serif;
+        }
+
+        p {
+            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            color: #111;
+            font-size: 15px;
+            line-height: 25px;
+        }
+
+        .navbar-brand > h1 {
+            font-family: 'Lobster', Georgia, Times, serif;
+            font-size: 30px;
+            line-height: 0px;
+            margin-top: 10px;
+            text-shadow: 4px 4px #000000
+        }
+
+        .container {
+            text-align: left;
+        }
+
+        #box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            width: 500px;
+        }
+
+        .v_spacing {
+            padding-top: 120px;
+        }
+
+        .input-group {
+            padding: 10px;
+        }
+
+        .btn-default:hover {
+            color: #fff;
+            font-weight: 900;
+            background-color: #d41b1b;
+            border-color: #d41b1b;
+        }
+
+        .btn-default:focus {
+            color: #fff;
+            font-weight: 900;
+            background-color: #d41b1b;
+            border-color: #d41b1b;
+        }
+
+        select {
+            margin-left: 10px;
+        }
+
+        .fa {
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 15px;
+        }
+
+    </style>
+
 </head>
 
 <body>
-    <div class="form-group col-lg-3">
-    </div>
-    <form class="col-lg-6">
-    <div class="form-group col-lg-12">
-        <label for="inputName">Name</label>
-        <input type="name" class="form-control" id="inputName" placeholder="Name">
-    </div>
-    <p></p>
-    <div class="form-group col-lg-12">
-        <label for="inputEmail">Email</label>
-        <input type="email" class="form-control" id="inputEmail" placeholder="Email - Must be a valid cornell.edu address">
-    </div>
-    <div class="form-group col-lg-12">
-        <label for="inputPassword">Password</label>
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-    </div>
-    <div class="form-group col-lg-12">
-        <label for="inputGender">Gender</label>
-        <select name = "gender">
-            <option value = " "> </option>
-            <option value = "M">M</option>
-            <option value = "F">F</option>
-        </select>
-    </div>
-    <div class="form-group col-lg-12">
-        <label for="inputPhone">Phone Number</label>
-        <input type="phone" class="form-control" id="inputPhone" placeholder="Phone">
-    </div>
-    <!-- <div class="form-group col-lg-12">
-        <label for="inputGroup">Preferred Number of Group Members</label>
-        <input type="group" class="form-control" id="inputGroup" placeholder="Number of Members">
-    </div> -->
-    <!-- <div class="form-group col-lg-12">
-        <label for="inputLoc">Preferred Location</label>
-        <select name = "locations">
-            <option value = " "> </option>
-            <option value = "Hans Bethe">Hans Bethe</option>
-            <option value = "Mews Hall">Mews Hall</option>
-        </select>
-    </div> -->
-    <div class="form-group col-lg-12">
-        <label for="inputLang">Preferred Language</label>
-        <select name = "languages">
-            <option value = " "> </option>
-            <option value = "English">English</option>
-            <option value = "Swahili">Swahili</option>
-        </select>
-    </div>
-    <div class="form-group col-lg-5">
-    </div>
-    <p></p> <p></p> <p></p> <p></p>
-    <button type="submit" class="btn btn-primary col-lg-3">Submit</button>
+<div class="v_spacing"></div>
+<div class="container col-lg-6 col-lg-push-5" id="box">
+
+    <form class="col-lg-12" action=>
+        <h2> Your Profile </h2>
+
+        <div class="input-group input-group-md col-md-12">
+         <span class="input-group-addon">
+            <i class="fa fa-user"> </i>
+          </span>
+            <input type="name" class="form-control" id="inputName" placeholder="Name - First Last" required>
+        </div>
+        <p></p>
+
+        <div class="input-group col-md-12">
+        <span class="input-group-addon">
+            <i class="fa fa-envelope"> </i>
+          </span>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email - a valid cornell.edu address"
+                   required pattern=([A-Za-z0-9_\-\.])+\@(cornell)+\.(edu)>
+        </div>
+        <p></p>
+
+        <div class="input-group col-md-12">
+        <span class="input-group-addon">
+            <i class="fa fa-lock"> </i>
+          </span>
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+        </div>
+        <p></p>
+
+        <div class="input-group col-md-12">
+        <span class="input-group-addon">
+            <i class="fa fa-phone"> </i>
+          </span>
+            <input type="phone" class="form-control" id="inputPhone" placeholder="Phone - ### - ### - ####" required
+                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{3} - [0-9]{3} - [0-9]{4}|[0-9]{3}[0-9]{3}[0-9]{4}">
+        </div>
+        <p></p>
+
+        <div class="input-group col-md-12">
+            <label for="inputGender">Gender: </label>
+            <select required id="gender">
+                <option value=""></option>
+                <option value="M">M</option>
+                <option value="F">F</option>
+            </select>
+        </div>
+        <div class="input-group col-md-12">
+            <label for="inputLang">Preferred Language: </label>
+            <select required name="languages">
+                <option value=""></option>
+                <option value="English">English</option>
+                <option value="Swahili">Swahili</option>
+            </select>
+        </div>
+        <div class="input-group col-md-5">
+        </div>
+
+        <button type="submit" class="btn btn-default col-lg-3">Submit</button>
     </form>
+</div>
 </body>
 </html>

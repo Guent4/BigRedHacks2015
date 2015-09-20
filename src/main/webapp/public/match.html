@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html> 
-    <head>
+<html>
+<head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,112 +10,288 @@
 
     <title>Match</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-inverse {
+            background-color: #b31b1b;
+            border-color: #000000;
+        }
 
-    <!-- Custom CSS -->
-    <link href="css/full.css" rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <!-- <script type="addRow" src="addRow.js"></script> -->
+        .navbar-brand {
+            font-size: 30px;
+            color: #fff;
+            font-family: arial;
+        }
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        .navbar-inverse .navbar-nav > li > a {
+            color: #fff;
+        }
+
+        .navbar-inverse .navbar-brand {
+            color: #fff;
+        }
+
+        .form-control {
+            height: 25px;
+        }
+
+        .spacing {
+            height: 60px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .fancy {
+            color: #000;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        .btn-default {
+            color: #fff;
+            font-weight: 800;
+            background-color: #b31b1b;
+            border-color: #000;
+            margin-right: 10px;
+        }
+
+        h1 {
+            font-family: 'Lobster', Georgia, Times, serif;
+            font-size: 60px;
+            line-height: 100px;
+            text-shadow: 3px 3px #000000
+        }
+
+        h2 {
+            font-family: 'Lobster', Georgia, Times, serif;
+        }
+
+        body {
+            background-color: transparent;
+            background-image: url(pics/adwhite.jpg);
+            /*background-size: 100%;*/
+            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            color: #FFF;
+        }
+
+        p {
+            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            color: #111;
+            font-size: 15px;
+            line-height: 25px;
+        }
+
+        .navbar-brand > h1 {
+            font-family: 'Lobster', Georgia, Times, serif;
+            font-size: 30px;
+            line-height: 0px;
+            margin-top: 10px;
+            text-shadow: 4px 4px #000000
+        }
+
+        .container {
+            text-align: left;
+        }
+
+        #box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding-top: 20px;
+            width: 500px;
+        }
+
+        .v_spacing {
+            padding-top: 120px;
+        }
+
+        .input-group {
+            padding: 10px;
+        }
+
+        .btn-default:hover {
+            color: #fff;
+            font-weight: 900;
+            background-color: #d41b1b;
+            border-color: #d41b1b;
+        }
+
+        .btn-default:focus {
+            color: #fff;
+            font-weight: 900;
+            background-color: #d41b1b;
+            border-color: #d41b1b;
+        }
+
+        select {
+            margin-left: 10px;
+        }
+
+        select option {
+            color:black
+        }
+
+        .fa {
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 15px;
+        }
+
+        #inputGroup {
+            display:inline;
+            margin-left: 10px;
+            width: 130px;
+        }
+
+        #inputStartTime {
+            display:inline;
+            margin-left: 10px;
+            width: 130px;
+        }
+
+        .timesheet {
+            text-align:center;
+            padding:5px;
+        }
+
+        #add_remove {
+            display:block;
+        }
+
+        #things {
+            color:black;
+        }
+
+        #things h1,label {
+            color:white;
+        }
+
+        #things .row {
+            color:white;
+        }
+
+    </style>
 
 </head>
-<body>
-    <div class="form-group col-lg-3">
-    </div>
-    <form class="form-group col-lg-6">
-    <div class="form-group col-lg-12">
-        <label for="inputCourse">Course</label>
-        <select required name = "course">
-            <option value = ""> </option>
-            <option value = "CS 2850">CS 2850</option>
-            <option value = "CS 2800">CS 2800</option>
-        </select>
-    </div>
-    <p></p>
-    <div class="form-group col-lg-12">
-        <label for="inputGroup">Preferred Number of Group Members</label>
-        <input required type="group" class="form-control" id="inputGroup" placeholder="Number of Members: An integer >= 0" pattern="\d*">
-    </div> 
-    <p></p>
-    <div class="form-group col-lg-12">
-        <label for="inputGender">Preferred Partner Gender</label>
-        <select required name = "preffered_gender">
-            <option value = ""> </option>
-            <option value = "M">M</option>
-            <option value = "F">F</option>
-            <option value = "Don't care">Don't care</option>
-        </select>
-    </div>
-    <p></p>
-    <div class="form-group col-lg-12">
-        <label for="inputLoc">Preferred Location</label>
-        <select required name = "locations">
-            <option value = ""> </option>
-            <option value = "Hans Bethe">Hans Bethe</option>
-            <option value = "Mews Hall">Mews Hall</option>
-        </select>
-    </div> 
-    <div class="form-group col-lg-5">
-    </div>
-    <div class="form-group col-lg-12" id="content">
-    <label for="inputAvailability">Availability:</label>
-    <p></p>
-    <p></p>
-        <div id="timesheet" class="timesheet">
-            <label for="Day">Day</label>
-            <select required name = "days" id = "day">
-                <option value = ""> </option>
-                <option value = "Mon">Mon</option>
-                <option value = "Tues">Tues</option>
-                <option value = "Wed">Wed</option>
-                <option value = "Thur">Thur</option>
-                <option value = "Fri">Fri</option>
-                <option value = "Sat">Sat</option>
-                <option value = "Sun">Sun</option>
-            </select>
-            <p></p>
-            <label for="startTime">Start Time</label>
-            <input required type="time" class="form-control" id="inputStartTime" placeholder="Time AM/PM">
-            <p></p>
-            <label for="endTime">End Time</label>
-            <input required type="time" class="form-control" id="inputEndTime">
-            <br><br>
-        </div>           
-    </div>
-        <div class="form-group col-lg-2" id="div1">
-        </div>
-        <button onclick="add()" type="button" class="btn btn-primary col-lg-3" id="addAvailability">Add Availability</button>
-        <br> <br> <br>
-        <div class="form-group col-lg-2" id="div2">
-        </div>
-        <button onclick="remove()" type="button" class="btn btn-primary col-lg-3" id="remove">Remove</button>
-        <div class="form-group col-lg-2" id="div3">
-        </div>
-        <button type="submit" class="btn btn-primary col-lg-3">Submit</button> 
-    </form>
+<div>
 
-    <script language:javascript>
-        function add() {
-            var theDiv = document.getElementById("content");
-            var other = document.getElementById("timesheet");
-            theDiv.innerHTML += other.outerHTML;
-        }
+    <div class="v_spacing"></div>
+    <div class="container col-lg-6 col-lg-push-5" id="box">
 
-        function remove() {
-            var theDiv = document.getElementById("content");
-            var num = document.getElementsByClassName("timesheet").length;
-            if (num > 1) {
-                theDiv.children[theDiv.children.length-1].remove(); 
-                num--;
-            }
+        <form class="form-group col-lg-12" id="things">
+            <h1 style="font-size:50px;text-align:center">Find your match!</h1>
+            <br>
+            <div class="form-group col-lg-12">
+                <label for="inputCourse">Course</label>
+                <select required name="course">
+                    <option value=""></option>
+                    <option value="CS 2850">CS 2850</option>
+                    <option value="CS 2800">CS 2800</option>
+                </select>
+            </div>
+            <p></p>
+
+            <div class="form-group col-lg-12">
+                <label for="inputGroup">Preferred Number of Group Members</label>
+                <input required type="group" class="form-control" id="inputGroup"
+                       placeholder="" pattern="\d*">
+            </div>
+            <p></p>
+
+            <div class="form-group col-lg-12">
+                <label for="inputGender">Preferred Partner Gender</label>
+                <select required name="preffered_gender">
+                    <option value=""></option>
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                    <option value="Don't care">Don't care</option>
+                </select>
+            </div>
+            <p></p>
+
+            <div class="form-group col-lg-12">
+                <label for="inputLoc">Preferred Location</label>
+                <select required name="locations">
+                    <option value=""></option>
+                    <option value="Hans Bethe">Hans Bethe</option>
+                    <option value="Mews Hall">Mews Hall</option>
+                </select>
+            </div>
+            <div class="form-group col-lg-5">
+            </div>
+            <div class="form-group col-lg-12" id="content">
+                <label for="inputAvailability">Availability:</label>
+
+
+                <div class="center form-group col-lg-12">
+
+                    <div class="row">
+                        <div class="col-sm-2">Day</div>
+                        <div class="col-sm-5">Start Time</div>
+                        <div class="col-sm-5">End Time</div>
+                    </div>
+
+                </div>
+
+                <div id="timesheet" class="timesheet">
+
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <select required name="days" id="day">
+                                <option value=""></option>
+                                <option value="Mon">Mon</option>
+                                <option value="Tues">Tues</option>
+                                <option value="Wed">Wed</option>
+                                <option value="Thur">Thur</option>
+                                <option value="Fri">Fri</option>
+                                <option value="Sat">Sat</option>
+                                <option value="Sun">Sun</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-5">
+
+                            <input required type="time" class="form-control" id="inputStartTime" placeholder="Time AM/PM">
+                        </div>
+                        <div class="col-sm-5">
+
+                            <input required type="time" class="form-control" id="inputEndTime">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="add_remove">
+                <button onclick="add()" type="button" class="btn btn-default col-lg-3" id="addAvailability">Add
+                    Availability
+                </button>
+
+                <button onclick="removeOne()" type="button" class="btn btn-default col-lg-3" id="remove">Remove</button>
+            </div>
+
+            <div class="col-lg-2"></div>
+
+
+            <div>
+                <button type="submit" class="btn btn-default col-lg-3">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+<script language:javascript>
+    function add() {
+        var theDiv = document.getElementById("content");
+        var other = document.getElementById("timesheet");
+        theDiv.innerHTML += other.outerHTML;
+    }
+
+    function removeOne() {
+        var theDiv = document.getElementById("content");
+        var num = document.getElementsByClassName("timesheet").length;
+        if (num > 1) {
+            theDiv.children[theDiv.children.length - 1].remove();
+            num--;
         }
-    </script>
+    }
+</script>
 </body>
 </html>

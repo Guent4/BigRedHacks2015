@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp" lang="en">
-<!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
-
+<html>
 <head>
 
     <meta charset="utf-8">
@@ -10,17 +8,30 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Find Your StudyBuddy</title>
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>You're matched!</title>
 
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/full.css" rel="stylesheet">
     <!-- FONTS -->
     <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
 
     <!-- ICONS -->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link href="css/carousel.css" rel="stylesheet">
 
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
     <style>
         .navbar-inverse {
@@ -35,7 +46,8 @@
         }
 
         body {
-            background-color: transparent;
+            background-image: url(pics/adwhite.jpg);
+            background-size: 100%;
         }
 
         .navbar-inverse .navbar-nav > li > a {
@@ -80,8 +92,13 @@
             text-shadow: 3px 3px #000000
         }
 
+        h2 {
+            font-family: 'Lobster', Georgia, Times, serif;
+        }
+
         body {
             font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            color: #FFF;
         }
 
         p {
@@ -100,62 +117,59 @@
         }
 
         .container {
-            text-align: center;
+            text-align: left;
+        }
+
+        #box {
+            background-color: rgba(0,0,0,0.7);
+            padding:30px;
+            width:500px;
         }
 
         .v_spacing {
-            padding-top: 100px;
+            padding-top: 120px;
         }
 
-        .fa {
-            padding-left: 15px;
-            padding-right: 15px;
-            font-size: 100px;
-        }
-
-        .loner {
-            font-size: 130px;
-            color: #292C85;
-        }
-
-        .together {
-            font-size: 120px;
-            color: #b31b1b;
-        }
-
-        .fa-microphone {
-            padding-top: 30px;
-            font-size: 130px;
-            color: #b31b1b;
+        .input-group {
+            padding: 10px;
         }
 
         .btn-default:hover {
             color: #fff;
-            font-weight: 900;
+            font-weight: 1500;
             background-color: #d41b1b;
             border-color: #d41b1b;
         }
 
         .btn-default:focus {
             color: #fff;
-            font-weight: 900;
+            font-weight: 1500;
             background-color: #d41b1b;
             border-color: #d41b1b;
         }
+
+        #accept {
+            float:left;
+            margin-left: 90px;
+            background-color: #308014;
+        }
+
+        #reject {
+            margin-left: 20px;
+        }
+
+        select {
+            margin-left: 10px;
+        }
+
     </style>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
 
 </head>
 
 <body>
 
-<!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container links">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -189,7 +203,7 @@
                            placeholder="Password">
                 </div>
                 <button ng-click="login()" type="submit" class="btn btn-default">Sign In</button>
-                <button class="btn btn-default" onclick="location.href='#signUp.html';">Register</button>
+                <button type="submit" class="btn btn-default">Register</button>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -197,68 +211,55 @@
     <!-- /.container -->
 </nav>
 
+<div class = "v_spacing"></div>
+<div class = "container col-lg-6 col-lg-push-5" id="box">
 
-<!--<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">-->
-<!--<div class="container links">-->
-<!--<div class="navbar-header">-->
-<!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">-->
-<!--<span class="sr-only">Toggle navigation</span>-->
-<!--<span class="icon-bar"></span>-->
-<!--<span class="icon-bar"></span>-->
-<!--<span class="icon-bar"></span>-->
-<!--</button>-->
-<!--<a class="navbar-brand" href="#"><h1>Study Buddy</h1></a>-->
-<!--</div>-->
-<!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
-<!--<ul class="navbar-form navbar-nav">-->
-<!--<div class="form-group"> Welcome, USERNAME! </div>-->
-<!--</ul>-->
-<!--<ul class="navbar-form navbar-right" role="search">-->
-<!--<button type="log out" class="btn btn-default">-->
-<!--Edit Profile-->
-<!--<span class="glyphicon glyphicon-user"></span>-->
-<!--</button>-->
-<!--<button type="log out" class="btn btn-default">-->
-<!--Log Out-->
-<!--<span class="glyphicon glyphicon-lock"></span>-->
-<!--</button>-->
-<!--</ul>-->
-<!--</div>-->
-<!--</div>-->
-<!--</nav>-->
+    <form class="col-lg-12" action= >
+        <h2> You're matched! </h2>
+        <h2> Here's your study buddy: </h2>
+        <div class="input-group input-group-md col-md-12">
+         <span class="input-group-addon">
+            <i class="fa fa-user"> </i>
+          </span>
+            <input disabled type="name" class="form-control" id="inputName" placeholder="Name - First Last" required>
+        </div>
+        <p></p>
+        <div class="input-group col-md-12">
+        <span class="input-group-addon">
+            <i class="fa fa-lock"> </i>
+          </span>
+            <input disabled type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+        </div>
+        <p></p>
+        <div class="input-group col-md-12">
+        <span class="input-group-addon">
+            <i class="fa fa-phone"> </i>
+          </span>
+            <input disabled type="phone" class="form-control" id="inputPhone" placeholder="Phone - ### - ### - ####" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{3} - [0-9]{3} - [0-9]{4}|[0-9]{3}[0-9]{3}[0-9]{4}">
+        </div>
+        <p></p>
+        <div class="input-group col-md-12">
+            <label for="inputGender">Gender: </label>
+            <select disabled required id="gender">
+                <option value = ""> </option>
+                <option value = "M">M</option>
+                <option value = "F">F</option>
+            </select>
+        </div>
+        <div class="input-group col-md-12">
+            <label for="inputLang">Preferred Language: </label>
+            <select disabled required name = "languages">
+                <option value = ""> </option>
+                <option value = "English">English</option>
+                <option value = "Swahili">Swahili</option>
+            </select>
+        </div>
+        <div class="input-group col-md-5">
+        </div>
 
-<!-- Put your page content here! -->
-
-<!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
-
-<div ng-view></div>
-
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/angular/angular.min.js"></script>
-<script src="bower_components/angular-route/angular-route.min.js"></script>
-<script src="bower_components/angular/angularboot.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="js/app.js"></script>
-<script>
-    // Smooth scroll for in page links
-    $(function () {
-        $('a[href*=#]:not([href=#myCarousel])').click(function () {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-</script>
-
+        <button type="submit" class="btn btn-default col-lg-3" id="accept">Accept</button>
+        <button type="submit" class="btn btn-default col-lg-3" id="reject">Match Again</button>
+    </form>
+</div>
 </body>
-
 </html>
