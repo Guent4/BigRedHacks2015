@@ -32,8 +32,8 @@
     <form class="form-group col-lg-6">
     <div class="form-group col-lg-12">
         <label for="inputCourse">Course</label>
-        <select name = "course">
-            <option value = " "> </option>
+        <select required name = "course">
+            <option value = ""> </option>
             <option value = "CS 2850">CS 2850</option>
             <option value = "CS 2800">CS 2800</option>
         </select>
@@ -41,13 +41,13 @@
     <p></p>
     <div class="form-group col-lg-12">
         <label for="inputGroup">Preferred Number of Group Members</label>
-        <input type="group" class="form-control" id="inputGroup" placeholder="Number of Members">
+        <input required type="group" class="form-control" id="inputGroup" placeholder="Number of Members: An integer >= 0" pattern="\d*">
     </div> 
     <p></p>
     <div class="form-group col-lg-12">
         <label for="inputGender">Preferred Partner Gender</label>
-        <select name = "preffered_gender">
-            <option value = " "> </option>
+        <select required name = "preffered_gender">
+            <option value = ""> </option>
             <option value = "M">M</option>
             <option value = "F">F</option>
             <option value = "Don't care">Don't care</option>
@@ -56,124 +56,66 @@
     <p></p>
     <div class="form-group col-lg-12">
         <label for="inputLoc">Preferred Location</label>
-        <select name = "locations">
-            <option value = " "> </option>
+        <select required name = "locations">
+            <option value = ""> </option>
             <option value = "Hans Bethe">Hans Bethe</option>
             <option value = "Mews Hall">Mews Hall</option>
         </select>
     </div> 
     <div class="form-group col-lg-5">
     </div>
-    <div class="form-group col-lg-12" class="timesheet-row">
+    <div class="form-group col-lg-12" id="content">
     <label for="inputAvailability">Availability:</label>
     <p></p>
     <p></p>
-        <label for="Day">Day</label>
-        <select name = "day" id = "day">
-            <option value = " "> </option>
-            <option value = "Mon">Mon</option>
-            <option value = "Tues">Tues</option>
-            <option value = "Wed">Wed</option>
-            <option value = "Thur">Thur</option>
-            <option value = "Fri">Fri</option>
-            <option value = "Sat">Sat</option>
-            <option value = "Sun">Sun</option>
-        </select>
-        <p></p>
-        <label for="startTime">Start Time</label>
-        <input type="time" class="form-control" id="inputStartTime">
-        <p></p>
-        <label for="endTime">End Time</label>
-        <input type="time" class="form-control" id="inputEndTime">
-        <br><br>
-        <p></p>
-        <label for="Day">Day</label>
-        <select name = "day" id = "day">
-            <option value = " "> </option>
-            <option value = "Mon">Mon</option>
-            <option value = "Tues">Tues</option>
-            <option value = "Wed">Wed</option>
-            <option value = "Thur">Thur</option>
-            <option value = "Fri">Fri</option>
-            <option value = "Sat">Sat</option>
-            <option value = "Sun">Sun</option>
-        </select>
-        <p></p>
-        <label for="startTime">Start Time</label>
-        <input type="time" class="form-control" id="inputStartTime">
-        <p></p>
-        <label for="endTime">End Time</label>
-        <input type="time" class="form-control" id="inputEndTime">
-        <br><br>
-        <p></p>   
-        <label for="Day">Day</label>
-        <select name = "day" id = "day">
-            <option value = " "> </option>
-            <option value = "Mon">Mon</option>
-            <option value = "Tues">Tues</option>
-            <option value = "Wed">Wed</option>
-            <option value = "Thur">Thur</option>
-            <option value = "Fri">Fri</option>
-            <option value = "Sat">Sat</option>
-            <option value = "Sun">Sun</option>
-        </select>
-        <p></p>
-        <label for="startTime">Start Time</label>
-        <input type="time" class="form-control" id="inputStartTime">
-        <p></p>
-        <label for="endTime">End Time</label>
-        <input type="time" class="form-control" id="inputEndTime">
-        <br><br>
-        <p></p>   
-        <label for="Day">Day</label>
-        <select name = "day" id = "day">
-            <option value = " "> </option>
-            <option value = "Mon">Mon</option>
-            <option value = "Tues">Tues</option>
-            <option value = "Wed">Wed</option>
-            <option value = "Thur">Thur</option>
-            <option value = "Fri">Fri</option>
-            <option value = "Sat">Sat</option>
-            <option value = "Sun">Sun</option>
-        </select>
-        <p></p>
-        <label for="startTime">Start Time</label>
-        <input type="time" class="form-control" id="inputStartTime">
-        <p></p>
-        <label for="endTime">End Time</label>
-        <input type="time" class="form-control" id="inputEndTime">
-        <br><br>
-        <p></p>   
-        <label for="Day">Day</label>
-        <select name = "day" id = "day">
-            <option value = " "> </option>
-            <option value = "Mon">Mon</option>
-            <option value = "Tues">Tues</option>
-            <option value = "Wed">Wed</option>
-            <option value = "Thur">Thur</option>
-            <option value = "Fri">Fri</option>
-            <option value = "Sat">Sat</option>
-            <option value = "Sun">Sun</option>
-        </select>
-        <p></p>
-        <label for="startTime">Start Time</label>
-        <input type="time" class="form-control" id="inputStartTime">
-        <p></p>
-        <label for="endTime">End Time</label>
-        <input type="time" class="form-control" id="inputEndTime">
-        <br>
-        <div class="form-group col-lg-5">
-        </div>
-        <p></p>
-        <button type="submit" class="btn btn-primary col-lg-3">Submit</button>       
+        <div id="timesheet" class="timesheet">
+            <label for="Day">Day</label>
+            <select required name = "days" id = "day">
+                <option value = ""> </option>
+                <option value = "Mon">Mon</option>
+                <option value = "Tues">Tues</option>
+                <option value = "Wed">Wed</option>
+                <option value = "Thur">Thur</option>
+                <option value = "Fri">Fri</option>
+                <option value = "Sat">Sat</option>
+                <option value = "Sun">Sun</option>
+            </select>
+            <p></p>
+            <label for="startTime">Start Time</label>
+            <input required type="time" class="form-control" id="inputStartTime" placeholder="Time AM/PM">
+            <p></p>
+            <label for="endTime">End Time</label>
+            <input required type="time" class="form-control" id="inputEndTime">
+            <br><br>
+        </div>           
     </div>
-   <!--  <button type="addRow" class="btn btn-primary col-lg-3" id="add-row">Add Row</button> -->
+        <div class="form-group col-lg-2" id="div1">
+        </div>
+        <button onclick="add()" type="button" class="btn btn-primary col-lg-3" id="addAvailability">Add Availability</button>
+        <br> <br> <br>
+        <div class="form-group col-lg-2" id="div2">
+        </div>
+        <button onclick="remove()" type="button" class="btn btn-primary col-lg-3" id="remove">Remove</button>
+        <div class="form-group col-lg-2" id="div3">
+        </div>
+        <button type="submit" class="btn btn-primary col-lg-3">Submit</button> 
     </form>
+
+    <script language:javascript>
+        function add() {
+            var theDiv = document.getElementById("content");
+            var other = document.getElementById("timesheet");
+            theDiv.innerHTML += other.outerHTML;
+        }
+
+        function remove() {
+            var theDiv = document.getElementById("content");
+            var num = document.getElementsByClassName("timesheet").length;
+            if (num > 1) {
+                theDiv.children[theDiv.children.length-1].remove(); 
+                num--;
+            }
+        }
+    </script>
 </body>
 </html>
-
-
-<!-- &#36;(&quot;#day&quot;).clone().insertBefore( &#36;(&quot;#add-row&quot;)); -->
-<!-- this.inesrtBefore(document.getElementById('timesheet-row')); console.log(2); -->
-
-<!--  onclick="console.log(document.getElementsByClassName('timesheet-row')); document.getElementById('myList').appendChild(document.getElementsByClassName('timesheet-row')[0]);" -->
