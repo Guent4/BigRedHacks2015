@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="parse()">Try it</button>
+
+<script type="text/javascript" src="buildings.json"></script>
+
+<script language: javascript>
+	function parse() {
+		var message = JSON.parse("buildings.json");
+		var arr = [];
+		for (var i = 0; i < message.length; i++) {
+    		var building = message[i];
+    		alert(building+"");
+    		arr[i] = "{" + building.Name + ", " + building.Latitude + ", " + building.Longitude + "}";
+    		console.log("{" + building.Name + ", " + building.Latitude + ", " + building.Longitude + "}");
+		}
+		return arr;
+	}	
+</script>
+</body>
+</html>
+
+<!-- // function parse(message) {
+// 	var jsonData = JSON.parse(message);
+// 	for(var i = 0; i < jsonData.buildings.length; i++) {
+// 		var building = jsonData.buildings[i];
+// 		console.log(building.Name + "," + building.Latitude + "," + building.Longitude);
+// 	}
+// }
+ -->
+
+ <!-- "document.write(parse("buildings.json"))" -->
