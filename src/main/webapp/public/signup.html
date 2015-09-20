@@ -1,4 +1,4 @@
-<!DOCTYPE HTML SYSTEM>
+<!DOCTYPE html>
 <html> 
     <head>
 
@@ -10,11 +10,21 @@
 
     <title>Sign-Up</title>
 
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/full.css" rel="stylesheet">
+    <!-- FONTS -->
+    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
+
     <!-- Bootstrap Core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/full.css" rel="stylesheet">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,49 +32,224 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <style>
+            .navbar-inverse {
+            background-color: #b31b1b;
+            border-color: #000000;
+        }
+
+        .navbar-brand {
+            font-size: 30px;
+            color: #fff;
+            font-family: arial;
+        }
+
+        body {
+            background-color: transparent;
+            background-image: url(pics/adwhite.jpg);
+            background-size: 100%;
+        }
+
+        .navbar-inverse .navbar-nav > li > a {
+            color: #fff;
+        }
+
+        .navbar-inverse .navbar-brand {
+            color: #fff;
+        }
+
+        .form-control {
+            height: 30px;
+        }
+
+        .spacing {
+            height: 60px;
+        }
+
+        .center {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .fancy {
+            color: #000;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        .btn-default {
+            color: #fff;
+            font-weight: 800;
+            background-color: #b31b1b;
+            border-color: #000;
+        }
+
+        h1 {
+            font-family: 'Lobster', Georgia, Times, serif;
+            font-size: 60px;
+            line-height: 100px;
+            text-shadow: 3px 3px #000000
+        }
+
+        h2 {
+            font-family: 'Lobster', Georgia, Times, serif;
+        }
+
+        body {
+            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            color: #FFF;
+        }
+
+        p {
+            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            color: #111;
+            font-size: 15px;
+            line-height: 25px;
+        }
+
+        .navbar-brand > h1 {
+            font-family: 'Lobster', Georgia, Times, serif;
+            font-size: 30px;
+            line-height: 0px;
+            margin-top: 10px;
+            text-shadow: 4px 4px #000000
+        }
+
+        .container {
+            text-align: left;
+        }
+
+        #box {
+            background-color: rgba(0,0,0,0.6);
+            padding:30px;
+            width:500px;
+        }
+
+        .v_spacing {
+            padding-top: 120px;
+        }
+
+        .input-group {
+            padding: 10px;
+        }
+
+                .btn-default:hover {
+            color: #fff;
+            font-weight: 1500;
+            background-color: #d41b1b;
+            border-color: #d41b1b;
+        }
+
+          .btn-default:focus {
+            color: #fff;
+            font-weight: 1500;
+            background-color: #d41b1b;
+            border-color: #d41b1b;
+        }
+
+    </style>
+
 </head>
 
 <body>
-    <div class="form-group col-lg-3">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container links">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#top"><h1>Study Buddy</h1></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div ng-controller="LoginController" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+            <ul class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input ng-model="user.email" type="text" class="form-control" name="username"
+                           placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input ng-model="user.password" type="text" class="form-control" name="password"
+                           placeholder="Password">
+                </div>
+                <button ng-click="login()" type="submit" class="btn btn-default">Sign In</button>
+                <button type="submit" class="btn btn-default">Register</button>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
-    <form class="col-lg-6" action= >
-    <div class="form-group col-lg-12">
-        <label for="inputName">Name</label>
-        <input type="name" class="form-control" id="inputName" placeholder="Name: First Last" required>
+    <!-- /.container -->
+</nav>
+
+<div class = "v_spacing"></div>
+<div class = "container col-lg-6 col-lg-push-5" id="box">
+
+    <form class="col-lg-12" action= >
+        <h2> Sign Up </h2>
+    <div class="input-group input-group-md col-md-12">
+         <span class="input-group-addon">
+            <i class="fa fa-user"> </i>
+          </span>
+        <input type="name" class="form-control" id="inputName" placeholder="Name - First Last" required>
     </div>
     <p></p>
-    <div class="form-group col-lg-12">
-        <label for="inputEmail">Email</label>
-        <input type="email" class="form-control" id="inputEmail" placeholder="Email: Must be a valid cornell.edu address" required pattern=([A-Za-z0-9_\-\.])+\@(cornell)+\.(edu)>
+    <div class="input-group col-md-12">
+        <span class="input-group-addon">
+            <i class="fa fa-envelope"> </i>
+          </span>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email - a valid cornell.edu address" required pattern=([A-Za-z0-9_\-\.])+\@(cornell)+\.(edu)>
     </div>
-    <div class="form-group col-lg-12">
-        <label for="inputPassword">Password</label>
+        <p></p>
+    <div class="input-group col-md-12">
+        <span class="input-group-addon">
+            <i class="fa fa-lock"> </i>
+          </span>
         <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
     </div>
-    <div class="form-group col-lg-12">
-        <label for="inputGender">Gender</label>
+    <p></p>
+    <div class="input-group col-md-12">
+        <span class="input-group-addon">
+            <i class="fa fa-phone"> </i>
+          </span>
+        <input type="phone" class="form-control" id="inputPhone" placeholder="Phone - ### - ### - ####" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{3} - [0-9]{3} - [0-9]{4}|[0-9]{3}[0-9]{3}[0-9]{4}">
+    </div>
+   <p></p>
+    <div class="input-group col-md-12">
+        <label for="inputGender">Gender: </label>
         <select required id="gender">
             <option value = ""> </option>
             <option value = "M">M</option>
             <option value = "F">F</option>
         </select>
     </div>
-    <div class="form-group col-lg-12">
-        <label for="inputPhone">Phone Number</label>
-        <input type="phone" class="form-control" id="inputPhone" placeholder="Phone: ### - ### - ####" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{3} - [0-9]{3} - [0-9]{4}|[0-9]{3}[0-9]{3}[0-9]{4}">
-    </div>
-    <div class="form-group col-lg-12">
-        <label for="inputLang">Preferred Language</label>
+    <div class="input-group col-md-12">
+        <label for="inputLang">Preferred Language: </label>
         <select required name = "languages">
             <option value = ""> </option>
             <option value = "English">English</option>
             <option value = "Swahili">Swahili</option>
         </select>
     </div>
-    <div class="form-group col-lg-5">
+    <div class="input-group col-md-5">
     </div>
-    <p></p> <p></p> <p></p> <p></p>
-    <button type="submit" class="btn btn-primary col-lg-3">Submit</button>
+
+    <button type="submit" class="btn btn-default col-lg-3">Submit</button>
     </form>
+</div>
 </body>
 </html>

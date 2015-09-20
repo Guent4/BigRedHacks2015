@@ -9,5 +9,5 @@ import java.util.List;
 public interface StudentRepository extends CrudRepository<Student, Long>
 {
     public List<Student> findByEmailAndPassword(String email, String password);
-    public Student findBySession(String session);
+    public List<Student> findBySession(String session);
 }
