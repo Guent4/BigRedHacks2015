@@ -1,9 +1,9 @@
 package com.bigredhacks.hackathon.preferences;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "LANGUAGE")
 public class Language
 {
     @Id
