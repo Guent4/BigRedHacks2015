@@ -3,19 +3,19 @@ var app = angular.module('myApp', ['ngRoute']);
 
 app.config( ['$routeProvider', function($routeProvider) {
     $routeProvider
-        .when('/home', {
+        .when('/home.html', {
             templateUrl: 'home.html'
         })
-        .when('/logged_in', {
+        .when('/logged_in.html', {
             templateUrl: 'logged_in.html'
         })
-        .when('/match', {
+        .when('/match.html', {
             templateUrl: 'match.html'
         })
-        .when('/profile', {
+        .when('/profile.html', {
             templateUrl: 'profile.html'
         })
-        .when('/singup', {
+        .when('/signup.html', {
             templateUrl: 'signup.html'
         })
         .otherwise({
@@ -36,6 +36,10 @@ app.service('LoginService', ['$http', function ($http) {
         return $http.post('/student/login', {email: student.email, password: student.password});
     };
 }]);
+
+//app.controller('NavController', ['$scope', function($scope) {
+//
+//}]);
 
 app.controller('LoginController', ['$scope', 'LoginService', function ($scope, LoginService) {
     $scope.greeting = 'Hola!';

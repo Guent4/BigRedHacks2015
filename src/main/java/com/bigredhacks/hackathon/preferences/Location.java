@@ -3,8 +3,8 @@ package com.bigredhacks.hackathon.preferences;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "BUILDING")
-public class Building
+@Table(name = "LOCATION")
+public class Location
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
