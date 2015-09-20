@@ -19,7 +19,7 @@ app.config( ['$routeProvider', function($routeProvider) {
             templateUrl: 'signup.html'
         })
         .otherwise({
-            redirectTo: '/home'
+            redirectTo: '/home.html'
         });
 }]);
 

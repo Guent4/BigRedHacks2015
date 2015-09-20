@@ -12,196 +12,225 @@
 
     <title>Find Your StudyBuddy</title>
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/full.css" rel="stylesheet">
+
     <!-- FONTS -->
+    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link href="css/carousel.css" rel="stylesheet">
+
+    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"
+          type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet"
+          type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Corben:bold"
+          rel="stylesheet" type="text/css">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link href="css/carousel.css" rel="stylesheet">
+
+    <style>
+        .navbar-inverse {
+            background-color: #b31b1b;
+            border-color: #000000;
+        }
+
+        .navbar-brand {
+            font-size: 30px;
+            color: #fff;
+            font-family: arial;
+        }
+
+        body {
+            background-color: transparent;
+        }
+
+        .navbar-inverse .navbar-nav > li > a {
+            color: #fff;
+        }
+
+        .navbar-inverse .navbar-brand {
+            color: #fff;
+        }
+
+        .form-control {
+            height: 30px;
+        }
+
+        .spacing {
+            height: 60px;
+        }
+
+        .center {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .fancy {
+            color: #000;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        .btn-default {
+            color: #fff;
+            font-weight: 800;
+            background-color: #b31b1b;
+            border-color: #000;
+        }
+
+        h1 {
+            font-family: 'Lobster', Georgia, Times, serif;
+            font-size: 60px;
+            line-height: 100px;
+            text-shadow: 3px 3px #000000
+        }
+
+        body {
+            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+        }
+
+        p {
+            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            color: #111;
+            font-size: 15px;
+            line-height: 25px;
+        }
+
+        .navbar-brand > h1 {
+            font-family: 'Lobster', Georgia, Times, serif;
+            font-size: 30px;
+            line-height: 0px;
+            margin-top: 10px;
+            text-shadow: 4px 4px #000000
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .v_spacing {
+            padding-top: 100px;
+        }
+
+        .fa {
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 100px;
+        }
+
+        .loner {
+            font-size: 130px;
+            color: #292C85;
+        }
+
+        .together {
+            font-size: 120px;
+            color: #b31b1b;
+        }
+
+        .fa-microphone {
+            padding-top: 30px;
+            font-size: 130px;
+            color: #b31b1b;
+        }
+
+
+    </style>
+
 </head>
 <body>
 
-<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
-
-<!-- ICONS -->
-<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-<link href="css/carousel.css" rel="stylesheet">
-
-<style>
-    .navbar-inverse {
-        background-color: #b31b1b;
-        border-color: #000000;
-    }
-
-    .navbar-brand {
-        font-size: 30px;
-        color: #fff;
-        font-family: arial;
-    }
-
-    body {
-        background-color: transparent;
-    }
-
-    .navbar-inverse .navbar-nav > li > a {
-        color: #fff;
-    }
-
-    .navbar-inverse .navbar-brand {
-        color: #fff;
-    }
-
-    .form-control {
-        height: 30px;
-    }
-
-    .spacing {
-        height: 60px;
-    }
-
-    .center {
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-    }
-
-    .fancy {
-        color: #000;
-        font-size: 30px;
-        font-weight: 800;
-    }
-
-    .btn-default {
-        color: #fff;
-        font-weight: 800;
-        background-color: #b31b1b;
-        border-color: #000;
-    }
-
-    h1 {
-        font-family: 'Lobster', Georgia, Times, serif;
-        font-size: 60px;
-        line-height: 100px;
-        text-shadow: 3px 3px #000000
-    }
-
-    body {
-        font-family: 'Cabin', Helvetica, Arial, sans-serif;
-    }
-
-    p {
-        font-family: 'Cabin', Helvetica, Arial, sans-serif;
-        color: #111;
-        font-size: 15px;
-        line-height: 25px;
-    }
-
-    .navbar-brand > h1 {
-        font-family: 'Lobster', Georgia, Times, serif;
-        font-size: 30px;
-        line-height: 0px;
-        margin-top: 10px;
-        text-shadow: 4px 4px #000000
-    }
-
-    .container {
-        text-align: center;
-    }
-
-    .v_spacing {
-        padding-top: 100px;
-    }
-
-    .fa {
-        padding-left: 15px;
-        padding-right: 15px;
-        font-size: 100px;
-    }
-
-    .loner {
-        font-size: 130px;
-        color: #292C85;
-    }
-
-    .together {
-        font-size: 120px;
-        color: #b31b1b;
-    }
-
-    .fa-microphone {
-        padding-top: 30px;
-        font-size: 130px;
-        color: #b31b1b;
-    }
-
-
-</style>
-
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container links">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#myCarousel"><h1>Study Buddy</h1></a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container links">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#myCarousel"><h1>Study Buddy</h1>
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div ng-controller="LoginController"
+                 class="collapse navbar-collapse"
+                 id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <ul class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input ng-model="user.email" type="text"
+                               class="form-control" name="username"
+                               placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input ng-model="user.password" type="text"
+                               class="form-control" name="password"
+                               placeholder="Password">
+                    </div>
+                    <button ng-click="login()" type="submit"
+                            class="btn btn-default">Sign In
+                    </button>
+                    <button type="submit" class="btn btn-default">Register
+                    </button>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div ng-controller="LoginController" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-            <ul class="navbar-form navbar-right" role="search">
-                <div class="form-group">
-                    <input ng-model="user.email" type="text" class="form-control" name="username"
-                           placeholder="Username">
-                </div>
-                <div class="form-group">
-                    <input ng-model="user.password" type="text" class="form-control" name="password"
-                           placeholder="Password">
-                </div>
-                <button ng-click="login()" type="submit" class="btn btn-default">Sign In</button>
-                <button type="submit" class="btn btn-default">Register</button>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+        <!-- /.container -->
+    </nav>
+
+
+    <div ng-view></div>
+    <!-- Put your page content here! -->
+    <div class="container">
+        <p>test</p><br><br>
+        <a href="#/signup.html">signup</a> -
+        <a href="#/logged_in.html">logged_in</a> -
+        <a href="#/match.html">match</a> -
+        <a href="#/profile.html">profile</a> -
+        <a href="#/home.html">home</a>
     </div>
-    <!-- /.container -->
-</nav>
 
-
-<div ng-view></div>
-<!-- Put your page content here! -->
-<div class="container">
-    <p>test</p><br><br>
-    <a href="#/signup.html">signup</a> -
-    <a href="#/logged_in.html">logged_in</a> -
-    <a href="#/match.html">match</a> -
-    <a href="#/profile.html">profile</a> -
-    <a href="#/home.html">home</a>
-</div>
-
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/angular/angular.min.js"></script>
-<script src="bower_components/angular-route/angular-route.min.js"></script>
-<script src="js/app.js"></script>
-
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular/angularboot.js"></script>
+    <script src="js/app.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        // Smooth scroll for in page links
+        $(function () {
+            $('a[href*=#]:not([href=#myCarousel])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
 
 </body>
 
