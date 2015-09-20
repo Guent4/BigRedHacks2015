@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="full" lang="en">
+<html lang="en">
 <!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
 
 <head>
@@ -16,8 +16,13 @@
     <!-- FONTS -->
     <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
     <style>
+
         .navbar-inverse {
         background-color: #b31b1b;
         border-color: #000000;
@@ -55,10 +60,11 @@
         vertical-align: middle;
         }
 
-        .fancy {
-        color: #000;
+        #fancy {
+        color: #FFF;
         font-size: 30px;
         font-weight: 800;
+        opacity: 1.0;
         }
 
         .btn-default {
@@ -70,19 +76,46 @@
 
         h1 {
             font-family: 'Lobster', Georgia, Times, serif;
-            font-size: 70px;
+            font-size: 60px;
             line-height: 100px;
-        }
-
-        body {
-            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            text-shadow: 3px 3px #000000
         }
 
         p {
             font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            color: #111;
             font-size: 15px;
             line-height: 25px;
         }
+
+        .navbar-brand > h1 {
+            font-family: 'Lobster', Georgia, Times, serif;
+            font-size: 30px;
+            line-height: 0px;
+            margin-top: 10px;
+            text-shadow: 4px 4px #000000
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .box {
+            text-align: center;
+            height:600px;
+            width: 100%;
+            padding:100px;
+            margin:auto;
+            background-color: rgba(0, 0, 0, 0.6)
+
+        }
+
+        body {
+            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            background-image: url(pics/adwhite.jpg);
+            background-size: 100%;
+        }
+
 
         .navbar-brand > h1 {
             font-size: 30px;
@@ -91,11 +124,20 @@
         }
 
         .navbar-form .form-group {
-        display: inline-block;
-        margin-bottom: 0px;
-        margin-top: 8px;
-        color: #FFF;
+            display: inline-block;
+            margin-bottom: 0px;
+            margin-top: 8px;
+            color: #FFF;
         }
+
+        .v_spacing {
+            padding-top: 50px;
+        }
+
+        .form-group {
+            width: 100px;
+        }
+
     </style>
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -139,15 +181,22 @@
             </div>
         </div>
     </nav>
-    <div class = 
-    <div class = "spacing"> </div>
-    <div class = "col-lg-5"> </div>
-    <div class = "center fancy"> <br><br>
-    Find your Study Buddy now. <br><br>
-    <button type="button" class="btn btn-default btn-lg">
-    Match
-    </button>
+    <div class = "v_spacing"> </div>
+    <div class = "box">
+        <div id = "fancy"> 
+            You're ready to match! <br><br>
+            Find your Study Buddy now. <br><br>
+
+            <div class="form-group">
+                   <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            </div>
+
+            <button type="submit" class="btn btn-default btn-lg">
+            Match
+            </button>
+        </div>
     </div>
+
     <!-- jQuery -->
      <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>

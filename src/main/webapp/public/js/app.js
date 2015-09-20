@@ -1,16 +1,10 @@
 'use strict';
-var app = angular.module('myApp', []);
 
-var User = function() {
-    this.session = null;
-    this.email = null;
-    this.password = null;
-};
-
-app.service('LoginService', ['$http', function($http){
-    this.login = function(student) {
-        return $http.post('/student/login', {email:student.email, password: student.password});
-    };
+angular.module('myApp', [
+  'ngRoute'
+]).
+config(['$routeProvider', function($routeProvider) {
+  $routeProvider.otherwise({redirectTo: '/home'});
 }]);
 
 app.controller('LoginController', ['$scope', 'LoginService', function ($scope, LoginService) {
