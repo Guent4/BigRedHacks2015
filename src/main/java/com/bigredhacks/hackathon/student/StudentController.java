@@ -37,21 +37,21 @@ public class StudentController
     }
 
     @RequestMapping(value="/register", method= RequestMethod.POST)
-    public ResponseEntity<HashMap<String,String>> register(@RequestBody Student student)
+    public ResponseEntity<HashMap<String,Boolean>> register(@RequestBody Student student)
     {
-        String session = null;
+        boolean result = false;
         HttpStatus httpStatus = null;
         try
         {
-            session = service.login(student);
+            result = service.register(student);
             httpStatus = HttpStatus.OK;
         }
         catch(IllegalArgumentException ex)
         {
             httpStatus = HttpStatus.BAD_REQUEST;
         }
-        HashMap<String,String> response = new HashMap<>();
-        response.put("data", session);
+        HashMap<String,Boolean> response = new HashMap<>();
+        response.put("data", result);
         return new ResponseEntity<>(response, httpStatus);
     }
 
