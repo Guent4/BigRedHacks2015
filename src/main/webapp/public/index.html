@@ -11,11 +11,14 @@
     <meta name="author" content="">
 
     <title>Find Your StudyBuddy</title>
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css"
+          rel="stylesheet">
 
     <!-- FONTS -->
-    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"
+          type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet"
+          type="text/css">
 
     <!-- ICONS -->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -153,111 +156,122 @@
 
 </head>
 
-<body>
-
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container links">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#top"><h1>Study Buddy</h1></a>
+<body ng-controller="StudentController" >
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container links">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#top"><h1>Study Buddy</h1></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div ng-controller="LoginController"
+                 class="collapse navbar-collapse"
+                 id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <ul class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input ng-model="user.email" type="text"
+                               class="form-control" name="username"
+                               placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input ng-model="user.password" type="text"
+                               class="form-control" name="password"
+                               placeholder="Password">
+                    </div>
+                    <button ng-click="login()" type="submit"
+                            class="btn btn-default">Sign In
+                    </button>
+                    <button class="btn btn-default"
+                            onclick="location.href='#signUp.html';">Register
+                    </button>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div ng-controller="LoginController" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-            <ul class="navbar-form navbar-right" role="search">
-                <div class="form-group">
-                    <input ng-model="user.email" type="text" class="form-control" name="username"
-                           placeholder="Username">
-                </div>
-                <div class="form-group">
-                    <input ng-model="user.password" type="text" class="form-control" name="password"
-                           placeholder="Password">
-                </div>
-                <button ng-click="login()" type="submit" class="btn btn-default">Sign In</button>
-                <button class="btn btn-default" onclick="location.href='#signUp.html';">Register</button>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
+        <!-- /.container -->
+    </nav>
 
 
-<!--<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">-->
-<!--<div class="container links">-->
-<!--<div class="navbar-header">-->
-<!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">-->
-<!--<span class="sr-only">Toggle navigation</span>-->
-<!--<span class="icon-bar"></span>-->
-<!--<span class="icon-bar"></span>-->
-<!--<span class="icon-bar"></span>-->
-<!--</button>-->
-<!--<a class="navbar-brand" href="#"><h1>Study Buddy</h1></a>-->
-<!--</div>-->
-<!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
-<!--<ul class="navbar-form navbar-nav">-->
-<!--<div class="form-group"> Welcome, USERNAME! </div>-->
-<!--</ul>-->
-<!--<ul class="navbar-form navbar-right" role="search">-->
-<!--<button type="log out" class="btn btn-default">-->
-<!--Edit Profile-->
-<!--<span class="glyphicon glyphicon-user"></span>-->
-<!--</button>-->
-<!--<button type="log out" class="btn btn-default">-->
-<!--Log Out-->
-<!--<span class="glyphicon glyphicon-lock"></span>-->
-<!--</button>-->
-<!--</ul>-->
-<!--</div>-->
-<!--</div>-->
-<!--</nav>-->
+    <!--<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">-->
+        <!--<div class="container links">-->
+            <!--<div class="navbar-header">-->
+                <!--<button type="button" class="navbar-toggle"-->
+                        <!--data-toggle="collapse"-->
+                        <!--data-target="#bs-example-navbar-collapse-1">-->
+                    <!--<span class="sr-only">Toggle navigation</span>-->
+                    <!--<span class="icon-bar"></span>-->
+                    <!--<span class="icon-bar"></span>-->
+                    <!--<span class="icon-bar"></span>-->
+                <!--</button>-->
+                <!--<a class="navbar-brand" href="#"><h1>Study Buddy</h1></a>-->
+            <!--</div>-->
+            <!--<div class="collapse navbar-collapse"-->
+                 <!--id="bs-example-navbar-collapse-1">-->
+                <!--<ul class="navbar-form navbar-nav">-->
+                    <!--<div class="form-group"> Welcome, {{$rootScope}}!</div>-->
+                <!--</ul>-->
+                <!--<ul class="navbar-form navbar-right" role="search">-->
+                    <!--<button type="log out" class="btn btn-default">-->
+                        <!--Edit Profile-->
+                        <!--<span class="glyphicon glyphicon-user"></span>-->
+                    <!--</button>-->
+                    <!--<button type="log out" class="btn btn-default">-->
+                        <!--Log Out-->
+                        <!--<span class="glyphicon glyphicon-lock"></span>-->
+                    <!--</button>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</nav>-->
 
-<!-- Put your page content here! -->
+    <!-- Put your page content here! -->
 
-<!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
 
-<div ng-view></div>
+    <div ng-view></div>
 
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/angular/angular.min.js"></script>
-<script src="bower_components/angular-route/angular-route.min.js"></script>
-<script src="bower_components/angular/angularboot.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="js/app.js"></script>
-<script>
-    // Smooth scroll for in page links
-    $(function () {
-        $('a[href*=#]:not([href=#myCarousel])').click(function () {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular/angularboot.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // Smooth scroll for in page links
+        $(function () {
+            $('a[href*=#]:not([href=#myCarousel])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
                 }
-            }
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
 

@@ -212,7 +212,7 @@
 </nav>
 
 <div class = "v_spacing"></div>
-<div class = "container col-lg-6 col-lg-push-5" id="box">
+<div ng-controller="MatchedController" class = "container col-lg-6 col-lg-push-5" id="box">
 
     <form class="col-lg-12" action= >
         <h2> You're matched! </h2>
@@ -221,26 +221,19 @@
          <span class="input-group-addon">
             <i class="fa fa-user"> </i>
           </span>
-            <input disabled type="name" class="form-control" id="inputName" placeholder="Name - First Last" required>
-        </div>
-        <p></p>
-        <div class="input-group col-md-12">
-        <span class="input-group-addon">
-            <i class="fa fa-lock"> </i>
-          </span>
-            <input disabled type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+            <input ng-model="matched.name" disabled type="name" class="form-control" id="inputName" placeholder="Name - First Last" required>
         </div>
         <p></p>
         <div class="input-group col-md-12">
         <span class="input-group-addon">
             <i class="fa fa-phone"> </i>
           </span>
-            <input disabled type="phone" class="form-control" id="inputPhone" placeholder="Phone - ### - ### - ####" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{3} - [0-9]{3} - [0-9]{4}|[0-9]{3}[0-9]{3}[0-9]{4}">
+            <input ng-model="matched.phoneNumber" disabled type="phone" class="form-control" id="inputPhone" placeholder="Phone - ### - ### - ####" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{3} - [0-9]{3} - [0-9]{4}|[0-9]{3}[0-9]{3}[0-9]{4}">
         </div>
         <p></p>
         <div class="input-group col-md-12">
             <label for="inputGender">Gender: </label>
-            <select disabled required id="gender">
+            <select ng-model="matched.gender" disabled required id="gender">
                 <option value = ""> </option>
                 <option value = "M">M</option>
                 <option value = "F">F</option>

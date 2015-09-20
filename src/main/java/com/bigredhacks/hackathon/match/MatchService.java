@@ -14,6 +14,7 @@ public class MatchService
     StudentRepository studentRepository;
 
     public static HashSet<Match> Matches = new HashSet<>();
+    public static int AUTOGEN = 0;
 
     public Student getMatch(Match match)
     {
@@ -22,7 +23,7 @@ public class MatchService
         List<Match> reasonableMatches = new ArrayList<>();
         for(Match m : Matches)
         {
-            if (m.course.equals(match.course) && match.availableTime.startTime.compareTo(m.availableTime.endTime) < 0 && match.availableTime.endTime.compareTo(m.availableTime.startTime) > 0)
+            if (m.course.equals(match.course) /*&& match.availableTime.startTime.compareTo(m.availableTime.endTime) < 0 && match.availableTime.endTime.compareTo(m.availableTime.startTime) > 0*/)
             {
                 reasonableMatches.add(m);
             }
@@ -36,6 +37,8 @@ public class MatchService
             // match.student = s;
             // we could find no one, so save it
             // matchRepository.save(match);
+            match.id = AUTOGEN++;
+            match.student = s;
             Matches.add(match);
             return null;
         }
@@ -47,7 +50,7 @@ public class MatchService
             m.matched = true;
             Matches.add(m);
             // send back that user
-            Student s = studentRepository.findOne(m.id);
+            Student s = studentRepository.findOne(m.student.id);
             return s;
         }
     }

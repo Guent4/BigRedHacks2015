@@ -175,14 +175,14 @@
 <div>
 
     <div class="v_spacing"></div>
-    <div class="container col-lg-6 col-lg-push-5" id="box">
+    <div ng-controller="MatchController" class="container col-lg-6 col-lg-push-5" id="box">
 
         <form class="form-group col-lg-12" id="things">
             <h1 style="font-size:50px;text-align:center">Find your match!</h1>
             <br>
             <div class="form-group col-lg-12">
                 <label for="inputCourse">Course</label>
-                <select required name="course">
+                <select ng-model="user.course" required name="course">
                     <option value=""></option>
                     <option value="CS 2850">CS 2850</option>
                     <option value="CS 2800">CS 2800</option>
@@ -192,14 +192,14 @@
 
             <div class="form-group col-lg-12">
                 <label for="inputGroup">Preferred Number of Group Members</label>
-                <input required type="group" class="form-control" id="inputGroup"
+                <input ng-model="user.groupMembers" required type="group" class="form-control" id="inputGroup"
                        placeholder="" pattern="\d*">
             </div>
             <p></p>
 
             <div class="form-group col-lg-12">
                 <label for="inputGender">Preferred Partner Gender</label>
-                <select required name="preffered_gender">
+                <select ng-model="user.gender" required name="preferred_gender">
                     <option value=""></option>
                     <option value="M">M</option>
                     <option value="F">F</option>
@@ -210,7 +210,7 @@
 
             <div class="form-group col-lg-12">
                 <label for="inputLoc">Preferred Location</label>
-                <select required name="locations">
+                <select ng-model="user.location" required name="locations">
                     <option value=""></option>
                     <option value="Hans Bethe">Hans Bethe</option>
                     <option value="Mews Hall">Mews Hall</option>
@@ -271,7 +271,7 @@
 
 
             <div>
-                <button type="submit" class="btn btn-default col-lg-3">Submit</button>
+                <button ng-click="match()" type="submit" class="btn btn-default col-lg-3">Submit</button>
             </div>
 
         </form>
