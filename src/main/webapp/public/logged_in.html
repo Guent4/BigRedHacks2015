@@ -7,54 +7,51 @@
     <style>
 
         .navbar-inverse {
-        background-color: #b31b1b;
-        border-color: #000000;
+            background-color: #b31b1b;
+            border-color: #000000;
         }
 
         .navbar-brand {
-        font-size: 30px;
-        color: #fff;
-        font-family: arial;
-        }
-
-        body {
-        background-color: transparent;
+            font-size: 30px;
+            color: #fff;
+            font-family: arial;
         }
 
         .navbar-inverse .navbar-nav>li>a {
-        color: #fff;
+            color: #fff;
         }
 
         .navbar-inverse .navbar-brand {
-        color: #fff;
+            color: #fff;
         }
 
         .form-control {
-        height: 30px ;
+            height: 30px ;
         }
 
         .spacing {
-        height: 60px;
+            height: 60px;
         }
 
         .center {
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
         }
 
         #fancy {
-        color: #FFF;
-        font-size: 30px;
-        font-weight: 800;
-        opacity: 1.0;
+            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            color: #FFF;
+            font-size: 30px;
+            font-weight: 800;
+            opacity: 1.0;
         }
 
         .btn-default {
-        color: #fff;
-        font-weight: 800;
-        background-color: #b31b1b;
-        border-color: #000;
+            color: #fff;
+            font-weight: 800;
+            background-color: #b31b1b;
+            border-color: #000;
         }
 
         h1 {
@@ -83,20 +80,19 @@
             text-align: center;
         }
 
-        .box {
-            text-align: center;
-            height:600px;
-            width: 100%;
-            padding:100px;
-            margin:auto;
-            background-color: rgba(0, 0, 0, 0.6)
-
+        #box {
+            background-color: rgba(0,0,0,0.7);
+            padding:30px;
+            width:500px;
         }
 
+
         body {
-            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            background-color: transparent;
             background-image: url(pics/adwhite.jpg);
-            background-size: 100%;
+            /*background-size: 100%;*/
+            font-family: 'Cabin', Helvetica, Arial, sans-serif;
+            color: #FFF;
         }
 
 
@@ -111,75 +107,70 @@
             margin-bottom: 0px;
             margin-top: 8px;
             color: #FFF;
+            width: auto;
         }
 
         .v_spacing {
-            padding-top: 50px;
+            padding-top: 120px;
         }
 
         .form-group {
             width: 100px;
         }
 
+        .center {
+            text-align:center;
+        }
+
+        .fa {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .btn-default:hover {
+            color: #fff;
+            font-weight: 900;
+            background-color: #d41b1b;
+            border-color: #d41b1b;
+        }
+
+        .btn-default:focus {
+            color: #fff;
+            font-weight: 900;
+            background-color: #d41b1b;
+            border-color: #d41b1b;
+        }
+
     </style>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container links">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"><h1>Study Buddy</h1></a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="navbar-form navbar-nav">
-                    <div class="form-group"> Welcome, USERNAME! </div>
+<div>
 
-<!--                     <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li> -->
-                </ul>
-                <ul class="navbar-form navbar-right" role="search">
-                    <button type="log out" class="btn btn-default">
-                        Edit Profile 
-                        <span class="glyphicon glyphicon-user"></span>
-                    </button>
-                    <button type="log out" class="btn btn-default">
-                        Log Out
-                        <span class="glyphicon glyphicon-lock"></span>
-                    </button>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class = "v_spacing"> </div>
-    <div class = "box">
-        <div id = "fancy"> 
-            You're ready to match! <br><br>
-            Find your Study Buddy now. <br><br>
 
-            <div class="form-group">
-                   <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-            </div>
+<div class = "v_spacing"> </div>
+<div class = "container col-lg-6 col-lg-push-5" id="box">
+    <div id = "fancy">
+        You're ready to match! <br><br>
+        Find your Study Buddy now. <br><br>
 
-            <button type="submit" class="btn btn-default btn-lg">
-            Match
-            </button>
-        </div>
+        <i class="fa fa-user fa-3x"> </i>
+        <i class="fa fa-arrows-h fa-3x"> </i>
+        <i class="fa fa-user fa-3x"> </i>
+        <br><br>
     </div>
+    <!-- Implement quick match if there's time -->
 
-    <!-- jQuery -->
-     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <button type="submit" class="btn btn-default btn-lg">
+        Match
+    </button>
+
+</div>
+</div>
+
 </body>
 
 </html>

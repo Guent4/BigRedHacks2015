@@ -12,10 +12,13 @@ app.config( ['$routeProvider', function($routeProvider) {
         .when('/match.html', {
             templateUrl: 'match.html'
         })
+        .when('/matched.html', {
+            templateUrl: 'matched.html'
+        })
         .when('/profile.html', {
             templateUrl: 'profile.html'
         })
-        .when('/signup.html', {
+        .when('/signUp.html', {
             templateUrl: 'signup.html'
         })
         .otherwise({
