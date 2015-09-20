@@ -19,7 +19,7 @@
     <link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
 
     <!-- ICONS -->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
     <style>
 
@@ -61,6 +61,7 @@
         }
 
         #fancy {
+        font-family: 'Cabin', Helvetica, Arial, sans-serif;
         color: #FFF;
         font-size: 30px;
         font-weight: 800;
@@ -100,15 +101,12 @@
             text-align: center;
         }
 
-        .box {
-            text-align: center;
-            height:600px;
-            width: 100%;
-            padding:100px;
-            margin:auto;
-            background-color: rgba(0, 0, 0, 0.6)
-
+        #box {
+            background-color: rgba(0,0,0,0.6);
+            padding:30px;
+            width:500px;
         }
+
 
         body {
             font-family: 'Cabin', Helvetica, Arial, sans-serif;
@@ -128,14 +126,38 @@
             margin-bottom: 0px;
             margin-top: 8px;
             color: #FFF;
+            width: auto;
         }
 
         .v_spacing {
-            padding-top: 50px;
+            padding-top: 120px;
         }
 
         .form-group {
             width: 100px;
+        }
+
+        .center {
+            text-align:center;
+        }
+
+        .fa {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+                .btn-default:hover {
+            color: #fff;
+            font-weight: 1500;
+            background-color: #d41b1b;
+            border-color: #d41b1b;
+        }
+
+          .btn-default:focus {
+            color: #fff;
+            font-weight: 1500;
+            background-color: #d41b1b;
+            border-color: #d41b1b;
         }
 
     </style>
@@ -181,21 +203,27 @@
             </div>
         </div>
     </nav>
+
+
     <div class = "v_spacing"> </div>
-    <div class = "box">
+    <div class = "container col-lg-6 col-lg-push-5" id="box">
         <div id = "fancy"> 
             You're ready to match! <br><br>
             Find your Study Buddy now. <br><br>
 
-            <div class="form-group">
-                   <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-            </div>
+            <i class="fa fa-user fa-3x loner"> </i>
+            <i class="fa fa-arrows-h fa-3x"> </i>
+            <i class="fa fa-user fa-3x together"> </i>
+            <br><br>
+ </div>
+            <!-- Implement quick match if there's time -->
 
             <button type="submit" class="btn btn-default btn-lg">
             Match
             </button>
-        </div>
+       
     </div>
+
 
     <!-- jQuery -->
      <script src="bower_components/jquery/dist/jquery.js"></script>
